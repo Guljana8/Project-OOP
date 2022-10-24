@@ -1,7 +1,4 @@
 package PROJECT;
-import java.sql.SQLOutput;
-public class Task4 {
-}
 /* Provide Implementation for the diagram below.
  * Then create a test class in which you need to create Objects of ChromeDriver, FirefoxDrive and SafariDriver
  * classes and see which methods available to them.
@@ -11,11 +8,11 @@ interface WebDriver {
     void close();
     String getTitle();
 }
-interface TakesScheenshot {
+interface TakesScreenshot {
     void getScreenshot();
 }
 
-interface RemoteWebDriver extends WebDriver, TakesScheenshot {
+interface RemoteWebDriver extends WebDriver, TakesScreenshot {
     void navigate();
 }
 
@@ -23,24 +20,24 @@ class ChromeDriver implements RemoteWebDriver{
     String title = "Chrome";
     @Override
     public void open() {
-        System.out.println("open the Chrome");
+        System.out.println("open the "+title);
     }
     @Override
     public void close() {
-        System.out.println("close the Chrome");
+        System.out.println("close the "+title);
     }
     @Override
     public String getTitle() {
-        System.out.println("get title the Chrome");
+        System.out.println("get title the "+title);
         return title;
     }
     @Override
     public void getScreenshot() {
-        System.out.println("get screenshoot the Chrome");
+        System.out.println("get screenshot the "+title);
     }
     @Override
     public void navigate() {
-        System.out.println("navigate the Chrome");
+        System.out.println("navigate the "+title);
     }
 }
 
@@ -48,48 +45,48 @@ class FirefoxDrive implements RemoteWebDriver {
     String title = "Firefox";
     @Override
     public void open() {
-        System.out.println("open the Firefox");
+        System.out.println("open the "+title);
     }
     @Override
     public void close() {
-        System.out.println("close the Firefox");
+        System.out.println("close the "+title);
     }
     @Override
     public String getTitle() {
-        System.out.println("get title the Firefox");
+        System.out.println("get title the "+title);
         return title;
     }
     @Override
     public void getScreenshot() {
-        System.out.println("get screenshoot the Firefox");
+        System.out.println("get screenshot the "+title);
     }
     @Override
     public void navigate() {
-        System.out.println("navigate the Firefox");
+        System.out.println("navigate the "+title);
     }
 }
 class SafariDriver implements RemoteWebDriver {
     String title = "Safari";
     @Override
     public void open() {
-        System.out.println("open the Safari");
+        System.out.println("open the "+title);
     }
     @Override
     public void close() {
-        System.out.println("close the Safari");
+        System.out.println("close the "+title);
     }
     @Override
     public String getTitle() {
-        System.out.println("get title the Safari");
+        System.out.println("get title the "+title);
         return title;
     }
     @Override
     public void getScreenshot() {
-        System.out.println("get screenshoot the Safari");
+        System.out.println("get screenshot the "+title);
     }
     @Override
     public void navigate() {
-        System.out.println("navigate the Safari");
+        System.out.println("navigate the "+title);
     }
 }
 
